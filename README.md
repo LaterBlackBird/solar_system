@@ -18,10 +18,10 @@ NPM
 Git
 ## Installation
 
-move to the directory you would like to develope from
-clone from repo
-install dependencies
-run locally on port 3000
+1. move to the directory you would like to develope from
+2. clone from repo
+3. install dependencies
+4. run locally on port 3000
 
 ```bash
   cd <projects directory>
