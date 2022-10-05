@@ -1,0 +1,38 @@
+{
+  "Mercury": {
+    "diameter": 4879,
+    "distanceFromSun": 57900000
+  },
+  "Venus": {
+    "diameter": 12104,
+    "distanceFromSun": 108200000
+  },
+  "Earth": {
+    "diameter": 12756,
+    "distanceFromSun": 149600000
+  },
+  "Mars": {
+    "diameter": 6792,
+    "distanceFromSun": 228000000
+  },
+  "Jupiter": {
+    "diameter": 142984,
+    "distanceFromSun": 778500000
+  },
+  "Saturn": {
+    "diameter": 120536,
+    "distanceFromSun": 1432000000
+  },
+  "Uranus": {
+    "diameter": 51118,
+    "distanceFromSun": 12867000000
+  },
+  "Neptune": {
+    "diameter": 49528,
+    "distanceFromSun": 4515000000
+  },
+  "Pluto": {
+    "diameter": 2376,
+    "distanceFromSun": 5906400000
+  }
+}

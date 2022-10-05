@@ -1,15 +1,23 @@
 import React, { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
+import { TextureLoader } from "three";
+
+import Planet from "./Components/atoms/Planet";
+import SunMap from './assets/Map_of_the_full_sun.jpg'
 
 import "./App.css";
 
 function App() {
+  const [sunTexture] = useLoader(TextureLoader, [SunMap])
+
   const Sun = () => {
     return (
       <mesh position={[0, 0, 0]}>
-        <sphereGeometry args={[5]} />
-        <meshLambertMaterial color="orange" />
+        <sphereGeometry args={[1392700/1000000]} />
+        {/* <meshLambertMaterial color="orange" /> */}
+        <meshStandardMaterial map={sunTexture} />
+
       </mesh>
     );
   };
@@ -169,7 +177,7 @@ function App() {
 
   return (
     <div id="canvas-container">
-      <Canvas shadowMap camera={{ position: [0, 10, 150], fov: 45 }}>
+      <Canvas camera={{ position: [0, 10, 150], fov: 45 }}>
         <OrbitControls />
         <ambientLight />
         <pointLight
@@ -180,15 +188,15 @@ function App() {
         />
         <Stars />
         <Sun />
-        <Mercury />
-        <Venus />
-        <Earth />
-        <Mars />
-        <Jupiter />
-        <Saturn />
-        <Uranus />
-        <Neptune />
-        <Pluto />
+        <Planet planetName={"Mercury"}/>
+        <Planet planetName={"Venus"}/>
+        <Planet planetName={"Earth"}/>
+        <Planet planetName={"Mars"}/>
+        <Planet planetName={"Jupiter"}/>
+        <Planet planetName={"Saturn"}/>
+        <Planet planetName={"Uranus"}/>
+        <Planet planetName={"Neptune"}/>
+        <Planet planetName={"Pluto"}/>
       </Canvas>
     </div>
   );
