@@ -1,183 +1,59 @@
-import React, { useRef } from "react";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import React from "react";
+import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import { TextureLoader } from "three";
 
 import Planet from "./Components/atoms/Planet";
-import SunMap from './assets/Map_of_the_full_sun.jpg'
+import sunMap from "./assets/sun_map.jpg";
+import mercuryMap from "./assets/mercury_map.jpg";
+import venusMap from "./assets/venus_map.jpg";
+import earthMap from "./assets/earth_map.png";
+import marsMap from "./assets/mars_map.jpg";
+import jupiterMap from "./assets/jupiter_map.jpg";
+import saturnMap from "./assets/saturn_map.jpg";
+import uranusMap from "./assets/uranus_map.jpg";
+import neptuneMap from "./assets/neptune_map.jpg";
+import plutoMap from "./assets/pluto_map.jpg";
 
 import "./App.css";
 
 function App() {
-  const [sunTexture] = useLoader(TextureLoader, [SunMap])
+  const [
+    sunTexture,
+    mercuryTexture,
+    venusTexture,
+    earthTexture,
+    marsTexture,
+    jupiterTexture,
+    saturnTexture,
+    uranusTexture,
+    neptuneTexture,
+    plutoTexture,
+  ] = useLoader(TextureLoader, [
+    sunMap,
+    mercuryMap,
+    venusMap,
+    earthMap,
+    marsMap,
+    jupiterMap,
+    saturnMap,
+    uranusMap,
+    neptuneMap,
+    plutoMap,
+  ]);
 
   const Sun = () => {
     return (
       <mesh position={[0, 0, 0]}>
-        <sphereGeometry args={[1392700/1000000]} />
-        {/* <meshLambertMaterial color="orange" /> */}
+        <sphereGeometry args={[((1392700 / 2)/1000000)]} />
         <meshStandardMaterial map={sunTexture} />
-
-      </mesh>
-    );
-  };
-
-  const Mercury = () => {
-    const mercuryRef = useRef();
-
-    useFrame(({ clock }) => {
-      const time = clock.getElapsedTime();
-      mercuryRef.current.position.x = 10 * Math.sin(time);
-      mercuryRef.current.position.z = 9 * Math.cos(time);
-    });
-
-    return (
-      <mesh ref={mercuryRef}>
-        <sphereGeometry args={[0.25]} castShadow />
-        <meshStandardMaterial color={0xa83232} />
-      </mesh>
-    );
-  };
-
-  const Venus = () => {
-    const venusRef = useRef();
-
-    useFrame(({ clock }) => {
-      const time = clock.getElapsedTime() * .75;
-      venusRef.current.position.x = 15 * Math.sin(time);
-      venusRef.current.position.z = 14 * Math.cos(time);
-    });
-
-    return (
-      <mesh ref={venusRef}>
-        <sphereGeometry args={[.2]} castShadow />
-        <meshStandardMaterial color={0xe3df12} />
-      </mesh>
-    );
-  };
-
-  const Earth = () => {
-    const earthRef = useRef();
-
-    useFrame(({ clock }) => {
-      const time = clock.getElapsedTime() * .5;
-      earthRef.current.position.x = 25 * Math.sin(time);
-      earthRef.current.position.z = 20 * Math.cos(time);
-    });
-
-    return (
-      <mesh ref={earthRef}>
-        <sphereGeometry args={[.5]} castShadow />
-        <meshStandardMaterial color={0x111070} />
-      </mesh>
-    );
-  };
-
-  const Mars = () => {
-    const marsRef = useRef();
-
-    useFrame(({ clock }) => {
-      const time = clock.getElapsedTime() * .4;
-      marsRef.current.position.x = 35 * Math.sin(time);
-      marsRef.current.position.z = 30 * Math.cos(time);
-    });
-
-    return (
-      <mesh ref={marsRef}>
-        <sphereGeometry args={[.5]} castShadow />
-        <meshStandardMaterial color={0xfc032c} />
-      </mesh>
-    );
-  };
-
-  const Jupiter = () => {
-    const jupiterRef = useRef();
-
-    useFrame(({ clock }) => {
-      const time = clock.getElapsedTime() * .35;
-      jupiterRef.current.position.x = 45 * Math.sin(time);
-      jupiterRef.current.position.z = 40 * Math.cos(time);
-    });
-
-    return (
-      <mesh ref={jupiterRef}>
-        <sphereGeometry args={[1.5]} castShadow />
-        <meshStandardMaterial color={0xc47d78} />
-      </mesh>
-    );
-  };
-
-  const Saturn = () => {
-    const saturnRef = useRef();
-
-    useFrame(({ clock }) => {
-      const time = clock.getElapsedTime() * .3;
-      saturnRef.current.position.x = 55 * Math.sin(time);
-      saturnRef.current.position.z = 60 * Math.cos(time);
-    });
-
-    return (
-      <mesh ref={saturnRef}>
-        <sphereGeometry args={[.1]} castShadow />
-        <meshStandardMaterial color={0x73714c} />
-      </mesh>
-    );
-  };
-
-  const Uranus = () => {
-    const uranusRef = useRef();
-
-    useFrame(({ clock }) => {
-      const time = clock.getElapsedTime() * .25;
-      uranusRef.current.position.x = 75 * Math.sin(time);
-      uranusRef.current.position.z = 70 * Math.cos(time);
-    });
-
-    return (
-      <mesh ref={uranusRef}>
-        <sphereGeometry args={[.6]} castShadow />
-        <meshStandardMaterial color={0x02f5f1} />
-      </mesh>
-    );
-  };
-
-  const Neptune = () => {
-    const neptuneRef = useRef();
-
-    useFrame(({ clock }) => {
-      const time = clock.getElapsedTime() * .2;
-      neptuneRef.current.position.x = 85 * Math.sin(time);
-      neptuneRef.current.position.z = 80 * Math.cos(time);
-    });
-
-    return (
-      <mesh ref={neptuneRef}>
-        <sphereGeometry args={[.7]} castShadow />
-        <meshStandardMaterial color={0x1302cc} />
-      </mesh>
-    );
-  };
-
-  const Pluto = () => {
-    const plutoRef = useRef();
-
-    useFrame(({ clock }) => {
-      const time = clock.getElapsedTime() * .15;
-      plutoRef.current.position.x = 95 * Math.sin(time);
-      plutoRef.current.position.z = 90 * Math.cos(time);
-    });
-
-    return (
-      <mesh ref={plutoRef}>
-        <sphereGeometry args={[.05]} castShadow />
-        <meshStandardMaterial color={'white'} />
       </mesh>
     );
   };
 
   return (
     <div id="canvas-container">
-      <Canvas camera={{ position: [0, 10, 150], fov: 45 }}>
+      <Canvas camera={{ position: [-20, 5, 35], fov: 45 }}>
         <OrbitControls />
         <ambientLight />
         <pointLight
@@ -188,15 +64,15 @@ function App() {
         />
         <Stars />
         <Sun />
-        <Planet planetName={"Mercury"}/>
-        <Planet planetName={"Venus"}/>
-        <Planet planetName={"Earth"}/>
-        <Planet planetName={"Mars"}/>
-        <Planet planetName={"Jupiter"}/>
-        <Planet planetName={"Saturn"}/>
-        <Planet planetName={"Uranus"}/>
-        <Planet planetName={"Neptune"}/>
-        <Planet planetName={"Pluto"}/>
+        <Planet planetName={"Mercury"} texture={mercuryTexture} />
+        <Planet planetName={"Venus"} texture={venusTexture} />
+        <Planet planetName={"Earth"} texture={earthTexture} />
+        <Planet planetName={"Mars"} texture={marsTexture} />
+        <Planet planetName={"Jupiter"} texture={jupiterTexture} />
+        <Planet planetName={"Saturn"} texture={saturnTexture} />
+        <Planet planetName={"Uranus"} texture={uranusTexture} />
+        <Planet planetName={"Neptune"} texture={neptuneTexture} />
+        <Planet planetName={"Pluto"} texture={plutoTexture} />
       </Canvas>
     </div>
   );

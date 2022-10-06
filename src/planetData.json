@@ -1,38 +1,52 @@
 {
+  "Sun": {
+    "diameter": 1391400,
+    "distanceFromSun": 0,
+    "revolultionPeriod": 0
+  },
   "Mercury": {
     "diameter": 4879,
-    "distanceFromSun": 57900000
+    "distanceFromSun": 57900000,
+    "revolultionPeriod": 87.97
   },
   "Venus": {
     "diameter": 12104,
-    "distanceFromSun": 108200000
+    "distanceFromSun": 108200000,
+    "revolultionPeriod": 224.7
   },
   "Earth": {
     "diameter": 12756,
-    "distanceFromSun": 149600000
+    "distanceFromSun": 149600000,
+    "revolultionPeriod": 365.26
   },
   "Mars": {
     "diameter": 6792,
-    "distanceFromSun": 228000000
+    "distanceFromSun": 228000000,
+    "revolultionPeriod": 686.2
   },
   "Jupiter": {
     "diameter": 142984,
-    "distanceFromSun": 778500000
+    "distanceFromSun": 778500000,
+    "revolultionPeriod": 4328.9
   },
   "Saturn": {
     "diameter": 120536,
-    "distanceFromSun": 1432000000
+    "distanceFromSun": 1432000000,
+    "revolultionPeriod": 10752.9
   },
   "Uranus": {
     "diameter": 51118,
-    "distanceFromSun": 12867000000
+    "distanceFromSun": 12867000000,
+    "revolultionPeriod": 30663.65
   },
   "Neptune": {
     "diameter": 49528,
-    "distanceFromSun": 4515000000
+    "distanceFromSun": 4515000000,
+    "revolultionPeriod": 60148.35
   },
   "Pluto": {
     "diameter": 2376,
-    "distanceFromSun": 5906400000
+    "distanceFromSun": 5906400000,
+    "revolultionPeriod": 90735.35
   }
 }
