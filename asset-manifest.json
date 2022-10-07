@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/solar_system/static/css/main.869e3c93.css",
-    "main.js": "/solar_system/static/js/main.10e6b823.js",
+    "main.css": "/solar_system/static/css/main.7ba4e6fb.css",
+    "main.js": "/solar_system/static/js/main.65853eca.js",
     "static/js/787.d96af89e.chunk.js": "/solar_system/static/js/787.d96af89e.chunk.js",
     "static/media/mercury_map.jpg": "/solar_system/static/media/mercury_map.10c085a5c1bd7e7b54dd.jpg",
     "static/media/sun_map.jpg": "/solar_system/static/media/sun_map.d0731823a031fc628aa4.jpg",
@@ -13,12 +13,12 @@
     "static/media/neptune_map.jpg": "/solar_system/static/media/neptune_map.ec41b905dde4ed5a6346.jpg",
     "static/media/saturn_map.jpg": "/solar_system/static/media/saturn_map.bbf5449c3390d8d1134d.jpg",
     "index.html": "/solar_system/index.html",
-    "main.869e3c93.css.map": "/solar_system/static/css/main.869e3c93.css.map",
-    "main.10e6b823.js.map": "/solar_system/static/js/main.10e6b823.js.map",
+    "main.7ba4e6fb.css.map": "/solar_system/static/css/main.7ba4e6fb.css.map",
+    "main.65853eca.js.map": "/solar_system/static/js/main.65853eca.js.map",
     "787.d96af89e.chunk.js.map": "/solar_system/static/js/787.d96af89e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.869e3c93.css",
-    "static/js/main.10e6b823.js"
+    "static/css/main.7ba4e6fb.css",
+    "static/js/main.65853eca.js"
   ]
 }
