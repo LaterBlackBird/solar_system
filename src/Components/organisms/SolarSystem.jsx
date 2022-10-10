@@ -6,7 +6,7 @@ import Planet from "../molecules/Planet";
 
 import "./solarSystem.css";
 
-function App() {
+function SolarSystem() {
 
   const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]
 
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default SolarSystem;

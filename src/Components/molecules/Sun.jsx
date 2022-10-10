@@ -21,21 +21,99 @@ const Sun = () => {
   return (
     <>
       <pointLight position={[0, 0, 0]} color="white" intensity={4} castShadow />
-      <SunSpotLight position={[spotLightDistance, 0, 0]} angle={spotLightAngle} />
-      <SunSpotLight position={[-spotLightDistance, 0, 0]} angle={spotLightAngle} />
-      <SunSpotLight position={[0, spotLightDistance, 0]}angle={spotLightAngle} />
-      <SunSpotLight position={[0, -spotLightDistance, 0]}angle={spotLightAngle} />
-      <SunSpotLight position={[0, 0, spotLightDistance]} angle={spotLightAngle} />
-      <SunSpotLight position={[0, 0, -spotLightDistance]} angle={spotLightAngle} />
-      <SunSpotLight position={[secondarySpotLightDistance, secondarySpotLightDistance, secondarySpotLightDistance]} angle={secondarySpotLightAngle} />
-      <SunSpotLight position={[-secondarySpotLightDistance, secondarySpotLightDistance, secondarySpotLightDistance]} angle={secondarySpotLightAngle} />
-      <SunSpotLight position={[-secondarySpotLightDistance, -secondarySpotLightDistance, secondarySpotLightDistance]} angle={secondarySpotLightAngle} />
-      <SunSpotLight position={[-secondarySpotLightDistance, -secondarySpotLightDistance, -secondarySpotLightDistance]} angle={secondarySpotLightAngle} />
-      <SunSpotLight position={[-secondarySpotLightDistance, secondarySpotLightDistance, -secondarySpotLightDistance]} angle={secondarySpotLightAngle} />
-      <SunSpotLight position={[secondarySpotLightDistance, secondarySpotLightDistance, -secondarySpotLightDistance]} angle={secondarySpotLightAngle} />
-      <SunSpotLight position={[secondarySpotLightDistance, -secondarySpotLightDistance, -secondarySpotLightDistance]} angle={secondarySpotLightAngle} />
-      <SunSpotLight position={[secondarySpotLightDistance, -secondarySpotLightDistance, secondarySpotLightDistance]} angle={secondarySpotLightAngle} />
-      <CelestialBody texture={sunTexture} planetRadius={sunRadius} ref={planetPosition}/>
+      <SunSpotLight
+        position={[spotLightDistance, 0, 0]}
+        angle={spotLightAngle}
+      />
+      <SunSpotLight
+        position={[-spotLightDistance, 0, 0]}
+        angle={spotLightAngle}
+      />
+      <SunSpotLight
+        position={[0, spotLightDistance, 0]}
+        angle={spotLightAngle}
+      />
+      <SunSpotLight
+        position={[0, -spotLightDistance, 0]}
+        angle={spotLightAngle}
+      />
+      <SunSpotLight
+        position={[0, 0, spotLightDistance]}
+        angle={spotLightAngle}
+      />
+      <SunSpotLight
+        position={[0, 0, -spotLightDistance]}
+        angle={spotLightAngle}
+      />
+      <SunSpotLight
+        position={[
+          secondarySpotLightDistance,
+          secondarySpotLightDistance,
+          secondarySpotLightDistance,
+        ]}
+        angle={secondarySpotLightAngle}
+      />
+      <SunSpotLight
+        position={[
+          -secondarySpotLightDistance,
+          secondarySpotLightDistance,
+          secondarySpotLightDistance,
+        ]}
+        angle={secondarySpotLightAngle}
+      />
+      <SunSpotLight
+        position={[
+          -secondarySpotLightDistance,
+          -secondarySpotLightDistance,
+          secondarySpotLightDistance,
+        ]}
+        angle={secondarySpotLightAngle}
+      />
+      <SunSpotLight
+        position={[
+          -secondarySpotLightDistance,
+          -secondarySpotLightDistance,
+          -secondarySpotLightDistance,
+        ]}
+        angle={secondarySpotLightAngle}
+      />
+      <SunSpotLight
+        position={[
+          -secondarySpotLightDistance,
+          secondarySpotLightDistance,
+          -secondarySpotLightDistance,
+        ]}
+        angle={secondarySpotLightAngle}
+      />
+      <SunSpotLight
+        position={[
+          secondarySpotLightDistance,
+          secondarySpotLightDistance,
+          -secondarySpotLightDistance,
+        ]}
+        angle={secondarySpotLightAngle}
+      />
+      <SunSpotLight
+        position={[
+          secondarySpotLightDistance,
+          -secondarySpotLightDistance,
+          -secondarySpotLightDistance,
+        ]}
+        angle={secondarySpotLightAngle}
+      />
+      <SunSpotLight
+        position={[
+          secondarySpotLightDistance,
+          -secondarySpotLightDistance,
+          secondarySpotLightDistance,
+        ]}
+        angle={secondarySpotLightAngle}
+      />
+      <CelestialBody
+        texture={sunTexture}
+        planetRadius={sunRadius}
+        ref={planetPosition}
+      />
     </>
   );
 };
