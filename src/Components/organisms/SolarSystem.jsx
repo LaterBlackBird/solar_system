@@ -8,21 +8,17 @@ import "./solarSystem.css";
 
 function App() {
 
+  const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]
+
   return (
     <>
       <OrbitControls />
       <ambientLight intensity={.1} />
       <Stars radius={400} depth={50} count={10000} factor={4} saturation={0} fade speed={1} />
       <Sun />
-      <Planet planetName={"Mercury"} />
-      <Planet planetName={"Venus"} />
-      <Planet planetName={"Earth"} />
-      <Planet planetName={"Mars"} />
-      <Planet planetName={"Jupiter"} />
-      <Planet planetName={"Saturn"} />
-      <Planet planetName={"Uranus"} />
-      <Planet planetName={"Neptune"} />
-      <Planet planetName={"Pluto"} />
+      {planets.map(planet => (
+        <Planet planetName={planet} />
+      ))}
     </>
   );
 }
